@@ -23,4 +23,7 @@ codex.user_setup()
 while True:
     update()
     render()
+
+    # this actually makes the timer inaccurate. I would need to use a sleep(delta) to have a semi accurate time that would adjust to runtime
+    # FIXME
     time.sleep(1)
