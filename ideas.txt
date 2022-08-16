@@ -1,0 +1,27 @@
+chatroom like environment to start
+a few characters that have a personality and occasionally chat messages?
+-nile the nihlist
+--everything is meaningless
+-fun fact fred
+--only chats fun facts
+-angry andy
+--gets angry at the other chatters
+-quoting quintin
+--only chats quotes
+-impatient issac
+--"are we starting yet"
+-captain obvious
+--"this is the start of the stream"
+---"thanks captain obvious"
+-granny
+-dog
+--woof
+-timing tina
+a timer of some sort, obviously (different for starting vs brb?)
+characters can respond to what others are saying
+dialog stored in files that are easily editable/readable?
+different rarities of dialog?
+
+start with cmd output then go from there
+pygame i think so that adding in images and other such gags is easier later on (emotes?)
+or maybe obs script?
