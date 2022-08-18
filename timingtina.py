@@ -18,6 +18,7 @@ class TimingTina(Chatter):
 
     def handle_andy_rage(self):
         if codex.get_did_andy_rage():
+            # find way to queue dialog for certain amount of time? maybe add seconds counter to the get_did_andy_rage function to delay the true return
             self.queue_dialog("Sheesh I'm just excited, chill andy")
             self.intimidate()
 
@@ -30,7 +31,8 @@ class TimingTina(Chatter):
         seconds_left = codex.get_time_seconds_left()
         if self.timid > 0 and seconds_left != 0:
             if seconds_left % 60 == 0:
-                print("Tina: {}".format(self.timid))
+                # FIXME remove
+                #print("Tina: {}".format(self.timid))
                 self.timid -= 1
             return
         if seconds_left == 0:

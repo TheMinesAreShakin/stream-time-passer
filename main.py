@@ -31,7 +31,7 @@ while True:
 
     # this actually makes the timer inaccurate. I would need to use a sleep(delta) to have a semi accurate time that would adjust to runtime
     # FIXME
-    #time.sleep(1) #FIXME uncomment
+    time.sleep(1) #FIXME uncomment
     # FIXME remove loop limit
-    if codex.get_time_seconds_left() < -240:
-        exit()
+    #if codex.get_time_seconds_left() < -240:
+    #    exit()
