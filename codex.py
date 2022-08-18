@@ -5,6 +5,9 @@ wait_type = ""
 timer_length_minutes = 0
 timer_length_seconds = 0
 timer_seconds_left = 0
+did_tina_chat = False
+tina_last_dialog = ""
+did_andy_rage = False
 
 
 def __user_wait_type():
@@ -77,6 +80,37 @@ def get_time_min_str(include_minus=True):
 
 def get_wait_type():
     return wait_type
+
+
+def set_did_tina_chat_true(dialog):
+    global did_tina_chat
+    global tina_last_dialog
+    did_tina_chat = True
+    tina_last_dialog = dialog
+
+
+def get_did_tina_chat():
+    global did_tina_chat
+    global tina_last_dialog
+    if did_tina_chat:
+        did_tina_chat = False
+        return True, tina_last_dialog
+    else:
+        return False, ""
+
+
+def set_did_andy_rage_true():
+    global did_andy_rage
+    did_andy_rage = True
+
+
+def get_did_andy_rage():
+    global did_andy_rage
+    if did_andy_rage:
+        did_andy_rage = False
+        return True
+    else:
+        return False
 
 
 def update():

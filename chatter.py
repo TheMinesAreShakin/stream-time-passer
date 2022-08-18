@@ -7,7 +7,7 @@ class Chatter:
     
     def queue_dialog(self, dialog):
         # adds newline for you
-        self.queued_dialog = "{}: {}\n".format(self.chatterName, dialog)
+        self.queued_dialog += "{}: {}\n".format(self.chatterName, dialog)
 
 
     def get_queued_dialog(self):
