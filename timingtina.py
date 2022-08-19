@@ -1,4 +1,5 @@
 import random
+from subprocess import call
 
 from chatter import Chatter
 import codex
@@ -11,15 +12,15 @@ class TimingTina(Chatter):
         self.timid = 0
 
 
-    def queue_dialog(self, dialog):
+    def queue_dialog(self, dialog, wait_time=0, callback=None):
         codex.set_did_tina_chat_true(dialog)
-        return super().queue_dialog(dialog)
+        return super().queue_dialog(dialog, wait_time=wait_time, callback=callback)
 
 
     def handle_andy_rage(self):
         if codex.get_did_andy_rage():
             # find way to queue dialog for certain amount of time? maybe add seconds counter to the get_did_andy_rage function to delay the true return
-            self.queue_dialog("Sheesh I'm just excited, chill andy")
+            self.queue_dialog("Sheesh I'm just excited, chill andy", wait_time=2)
             self.intimidate()
 
 

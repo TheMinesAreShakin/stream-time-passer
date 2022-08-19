@@ -21,8 +21,7 @@ class AngryAndy(Chatter):
                 self.reset_patience()
                 # TODO move following 2 lines into rage function, also find way to queue dialog for certain amount of time?
                 # maybe add seconds counter to the get_did_tina_chat function to delay the true return
-                self.queue_dialog("we get it \"{}\" shut up already".format(chat_content))
-                codex.set_did_andy_rage_true()
+                self.queue_dialog("we get it \"{}\" shut up already".format(chat_content), wait_time=2, callback=codex.set_did_andy_rage_true)
         
         # FIXME remove test patience LUL
         #if codex.get_time_seconds_left() % 10 == 0:

@@ -17,6 +17,9 @@ a few characters that have a personality and occasionally chat messages?
 -dog
 --woof
 -timing tina
+-rosie the roaster
+--ready to throw hands or backhanded comments
+-back in my day boomer
 a timer of some sort, obviously (different for starting vs brb?)
 characters can respond to what others are saying
 dialog stored in files that are easily editable/readable?
