@@ -1,3 +1,5 @@
+
+
 import time
 from tkinter import dialog
 
@@ -5,16 +7,20 @@ import codex
 import dialogqueue
 from timingtina import TimingTina
 from angryandy import AngryAndy
+from funfactfred import FunFactFred
 
 
-tina = TimingTina()
-andy = AngryAndy()
+chatters = [
+    ["tina", TimingTina()],
+    ["andy", AngryAndy()],
+    ["fred", FunFactFred()]
+]
 
 def update():
     # should be called every second
     codex.update()
-    tina.update()
-    andy.update()
+    for chatter in chatters:
+        chatter[1].update()
 
 
 def render():
@@ -33,7 +39,7 @@ while True:
 
     # this actually makes the timer inaccurate. I would need to use a sleep(delta) to have a semi accurate time that would adjust to runtime
     # FIXME
-    time.sleep(0.1) #FIXME uncomment
+    time.sleep(1) #FIXME uncomment
     # FIXME remove loop limit
     #if codex.get_time_seconds_left() < -240:
     #    exit()

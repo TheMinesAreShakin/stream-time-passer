@@ -22,6 +22,7 @@ a few characters that have a personality and occasionally chat messages?
 -back in my day boomer
 -spam sam
 -poetry paula
+-dad joke dan
 a timer of some sort, obviously (different for starting vs brb?)
 characters can respond to what others are saying
 dialog stored in files that are easily editable/readable?

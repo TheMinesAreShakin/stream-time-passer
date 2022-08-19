@@ -6,6 +6,7 @@ import codex
 class AngryAndy(Chatter):
     def __init__(self):
         super().__init__("Andy")
+        self.patience = 0
         self.reset_patience()
 
 
