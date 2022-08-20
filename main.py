@@ -50,13 +50,14 @@ def render():
 
 codex.user_setup()
 while True:
-
+    start_time = time.perf_counter()
     update()
     render()
+    end_time = time.perf_counter()
+    delta = end_time - start_time
 
-    # this actually makes the timer inaccurate. I would need to use a sleep(delta) to have a semi accurate time that would adjust to runtime
-    # FIXME
-    time.sleep(1) #FIXME uncomment
-    # FIXME remove loop limit
+    time.sleep(1-delta) #FIXME uncomment
+    # FIXME testing code
+    #time.sleep(0.1)
     #if codex.get_time_seconds_left() < -240:
     #    exit()
