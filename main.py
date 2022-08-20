@@ -17,6 +17,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 '''
 
+from multiprocessing.sharedctypes import Value
 import time
 from tkinter import dialog
 
@@ -56,7 +57,11 @@ while True:
     end_time = time.perf_counter()
     delta = end_time - start_time
 
-    time.sleep(1-delta) #FIXME uncomment
+    try:
+        time.sleep(1-delta) #FIXME uncomment
+    except ValueError:
+        # if delta is greater than 1
+        continue
     # FIXME testing code
     #time.sleep(0.1)
     #if codex.get_time_seconds_left() < -240:
