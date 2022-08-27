@@ -18,7 +18,6 @@
 '''
 
 import time
-from tkinter import dialog
 
 import codex
 import dialogqueue
@@ -60,6 +59,7 @@ while True:
         time.sleep(1-delta) #FIXME uncomment
     except ValueError:
         # if delta is greater than 1
+        dialogqueue.queue_dialog("That was a lot of work", "The Matrix")
         continue
     # FIXME testing code
     #time.sleep(0.1)
